@@ -1,28 +1,25 @@
+# Demo instance
+
+Testing instance: https://ccl-website-frontend.herokuapp.com/
+
+
 # Project Description
 
-Website for the CL Clinic
-
 Main features:
-Responsive design
-Presentation/Gallery
-
-- Presentation contains basic info and carousel with clinic members
+- Responsive design
+- Main page contains basic info and carousel with clinic members
 - Gallery contains sections with multiple photos
-- Version 2: Admin contains administration tools to manage the carousel and gallery photos and sections. Must be password secured.
+- Version 2 : Admin contains administration tools to manage the carousel and gallery photos and sections. Must be password secured.
 
 
 # Project Structure
 
-- Angular 2 frontend with Material + Flex Layout design
-- Go Api for admin authentication (version 2) and database communication 
-- MongoDB in Mongo Atlas platform
-- Hosting in Heroku
+- Application hosted in Heroku
+- Two environments available for the customer: QA testing and production
+- Angular 8+ Frontend with Material + Flex Layout design
+- Secured Auth API (Version 2)
+- Secured Operations API (Version 2)
+- MongoDB hosted in MongoDB Atlas
 - Private Github repos for version control  
 
-
-# Testing instance
-
-In order to share the progress a test version of the project will be deployed in Heroku and updated periodically.
-
-Testing instance: https://ccl-website-frontend.herokuapp.com/
 

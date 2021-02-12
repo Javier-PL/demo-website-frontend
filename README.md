@@ -4,21 +4,17 @@ Website for the CL Clinic
 
 Main features:
 Responsive design
-Presentation/Gallery/Kontakt/Jobs/Admin pages
+Presentation/Gallery
 
 - Presentation contains basic info and carousel with clinic members
 - Gallery contains sections with multiple photos
-- Kontakt contains a more detailed contact page
-- Jobs (may be not needed for the first version)
-- Admin contains administration tools to manage the carousel and gallery photos and sections. Must be password secured.
-
-First version expected deployment date: 01/12/202
+- Version 2: Admin contains administration tools to manage the carousel and gallery photos and sections. Must be password secured.
 
 
 # Project Structure
 
-- Angular 2 frontend
-- Go Api for authentication and database communication
+- Angular 2 frontend with Material + Flex Layout design
+- Go Api for admin authentication (version 2) and database communication 
 - MongoDB in Mongo Atlas platform
 - Hosting in Heroku
 - Private Github repos for version control  

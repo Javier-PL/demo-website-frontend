@@ -1,0 +1,55 @@
+.top-toolbar {
+  background-color: white;
+  color: gray;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+/*animated bottom border for buttons*/
+
+.animated-border {
+  position: relative;
+}
+
+.animated-border:after {
+  content: "";
+  position: absolute;
+  border-bottom: 2px solid rgb(61, 187, 209);
+  bottom: 0;
+  left: 80%;
+  right: 80%;
+  transition: all 500ms;
+}
+
+.animated-border:hover {
+  color: black;
+}
+
+.animated-border:hover:after {
+  right: 0;
+  left: 0;
+}
+
+/*Logo*/
+
+.logo {
+  min-height: 44px;
+  margin-left:20px;
+}
+
+.logo img {
+  max-width: 44px;
+  max-height: 44px;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo img:hover {
+  max-width: 44px;
+  max-height: 44px;
+  width: 43px;
+  height: 43px;
+  margin-right: 7px;
+}

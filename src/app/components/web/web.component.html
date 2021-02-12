@@ -1,0 +1,180 @@
+<div
+  style="margin-top: 50px"
+  id="AnchorTop"
+  class="back-lg"
+  ngClass.xs="back-xs"
+  ngClass.sm="back-md"
+  fxLayout="row"
+  fxLayoutAlign="space-between center"
+></div>
+
+<div
+  fxLayout="row"
+  fxLayout.sm="column"
+  fxLayout.xs="column"
+  fxLayoutGap="3%"
+  style="margin: 3%"
+>
+  <div fxLayout="column" fxLayoutAlign="space-between center" fxFlex="">
+    <img class="web-icon" src="assets/icons/physio_health.jpg" />
+   <!-- <h2 class="text-title">Experiencia</h2>
+    <span class="text"
+      >Placeholder text : Esta sección presenta información general sobre los
+      tipos de tratamiento usados contra el cáncer, incluyendo los tratamientos
+      convencionales, como cirugía, quimioterapia y radioterapia, así como
+      aquellos que son más recientes.</span
+    >-->
+    <h2 class="text-title">{{ 'web.topic1.title' | translate }}</h2>
+    <span class="text"
+      >{{ 'web.topic1.text' | translate }}</span
+    >
+  </div>
+  <div fxLayout="column" fxLayoutAlign="space-between center" fxFlex="">
+    <img class="web-icon" src="assets/icons/physio_notes.jpg" />
+    <h2 class="text-title">{{ 'web.topic2.title' | translate }}</h2>
+    <span class="text"
+      >{{ 'web.topic2.text' | translate }}
+    </span>
+  </div>
+  <div fxLayout="column" fxLayoutAlign="space-between center" fxFlex="">
+    <img class="web-icon" src="assets/icons/physio_treatment.jpg" />
+    <h2 class="text-title">{{ 'web.topic3.title' | translate }}</h2>
+    <span class="text"
+      >{{ 'web.topic3.text' | translate }}</span
+    >
+  </div>
+</div>
+
+<div
+  *ngIf="!showDetails"
+  class="team-row"
+  fxLayout="row"
+  fxLayout.sm="column"
+  fxLayout.xs="column"
+  fxLayoutGap="10%"
+  style="padding: 2% 3% 2% 3%"
+>
+  <div class="team-text" fxLayout="column" fxFlex="30%">
+    <img class="web-icon" src="assets/icons/physio_run.png" />
+    <h2 class="text-title">{{ 'web.carrousel.title' | translate }}</h2>
+    <span class="text">
+      {{ 'web.carrousel.text' | translate }}</span
+    >
+  </div>
+
+  <div fxLayout="column" fxLayoutAlign="space-between center" fxFlex="60%">
+    <div class="carousel-demo">
+      <p-carousel
+        [value]="pictures"
+        [numVisible]="carouselNumVisible"
+        [numScroll]="carouselNumScroll"
+        [circular]="true"
+        [responsiveOptions]="responsiveOptions"
+      >
+        <ng-template let-pic pTemplate="item">
+          <div class="car-details">
+            <div class="p-grid p-nogutter">
+              <div
+                class="p-col-12 picture-data"
+                (mouseover)="pic.showData = true"
+                (mouseout)="pic.showData = false"
+                (click)="showPhotoDetails(pic)"
+                style="cursor: pointer"
+              >
+                <div class="picture-title" *ngIf="pic.showData === true">
+                  {{ pic.title }}
+                </div>
+                <div class="picture-subtitle" *ngIf="pic.showData === true">
+                  {{ pic.description }}
+                </div>
+                <img
+                  class="picture"
+                  src="data:image/png;base64,{{ pic.base64 }}"
+                  alt="photo"
+                />
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+  </div>
+</div>
+
+<div
+  fxLayoutAlign="center center"
+  (click)="closePhotoDetails()"
+  *ngIf="showDetails"
+  class="team-row"
+  fxLayout="row"
+  fxLayout.xs="column"
+>
+  <div class="team-text" fxLayout="column" fxFlex="30%" fxFlex.sm="50%">
+    <h2 class="text-title">{{ selectedTeamMember.title }}</h2>
+    <span>{{ selectedTeamMember.description }}</span>
+  </div>
+
+  <div
+    class="details"
+    ngClass.xs="details-xs"
+    fxLayout="column"
+    fxLayoutAlign="space-between center"
+    fxFlex="30%"
+    fxFlex.sm="50%"
+  >
+    <img
+      src="data:image/png;base64,{{ selectedTeamMember.base64 }}"
+      alt="photo"
+      style="max-height: 45vh; border-radius: 15px; border: 1px solid grey"
+    />
+  </div>
+</div>
+
+<div
+  id="AnchorContact"
+  fxLayout="row"
+  fxLayout.sm="column"
+  fxLayout.xs="column"
+  fxLayoutGap="5%"
+  style="margin: 3%"
+>
+  <div fxLayout="column" fxLayoutAlign="space-between center" fxFlex="40%">
+    <h2 class="text-title"> {{ 'web.contact.title' | translate }}</h2>
+    <br />
+    <div>{{ 'web.contact.ownerTitle' | translate }}</div>
+    <div>{{ 'web.contact.owner' | translate }}</div>
+    <br />
+    <div>{{ 'web.contact.phone' | translate }}</div>
+    <div>
+      {{ 'web.contact.emailTitle' | translate }}
+      <a class="email" href="mailto:test@gmail.com">{{ 'web.contact.email' | translate }}</a>
+    </div>
+    <br />
+    <div>{{ 'web.contact.addressTitle' | translate }}</div>
+    <div>{{ 'web.contact.line1' | translate }}</div>
+    <div>{{ 'web.contact.line2' | translate }}</div>
+    <br />
+  </div>
+  <div fxLayout="column" class="gmap">
+    <!--removed fxFlex: otherwise no render when Layout column // added width in styles: otherwise no render when Layout is row-->
+    <agm-map
+      [latitude]="latitude"
+      [longitude]="longitude"
+      [mapTypeId]="mapType"
+      [zoom]="zoom"
+    >
+      <agm-marker
+        [latitude]="latitude"
+        [longitude]="longitude"
+        [label]="'CL'"
+      ></agm-marker>
+    </agm-map>
+  </div>
+
+  <div
+    fxLayout="column"
+    fxLayoutAlign="space-between center"
+    fxFlex="15%"
+    fxHide.xs
+  ></div>
+</div>

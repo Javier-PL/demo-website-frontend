@@ -1,0 +1,53 @@
+
+.fontsmall{
+  font-size: 0.8em;
+  line-height:0.8em;
+}
+
+.fontmed{
+  font-size: 1.5em;
+  line-height:1.5em;
+}
+
+/*Material changes*/
+
+mat-form-field{
+  /*width:22vmin !important*/
+  max-width:22vmin !important
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label{
+    color:#298a85 !important;
+    
+}
+
+::ng-deep .mat-form-field-ripple {
+  background-color: #53c2be !important;
+}
+
+::ng-deep .mat-option.mat-selected{
+  color:#53c2be !important
+}
+
+::ng-deep .mat-form-field.mat-form-field-hide-placeholder .mat-form-field-label{
+  font: 1.1em/1em Roboto, "Helvetica Neue", sans-serif ;
+}
+
+mat-form-field input {
+  font: 1.1em/1em Roboto, "Helvetica Neue", sans-serif;
+}
+
+mat-form-field textarea {
+  font: 1.1em/1em Roboto, "Helvetica Neue", sans-serif;
+}
+
+ ::ng-deep mat-form-field.mat-form-field-should-float label {
+  font: 1.3em/1em Roboto, "Helvetica Neue", sans-serif ;
+}
+
+mat-error {
+  font: 1.3em/1em Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+

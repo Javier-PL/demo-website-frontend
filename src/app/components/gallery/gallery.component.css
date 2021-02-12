@@ -1,0 +1,34 @@
+.title {
+  color: grey;
+  height: 20vh;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*image*/
+
+.back-lg {
+  background: url("../../../assets/placeholder2.jpg") no-repeat 0 0;
+  height: 50vh;
+  background-size: cover;
+}
+
+.back-md {
+  background: url("../../../assets/placeholder2-tablet.jpg") no-repeat 0 0;
+  width: 100%;
+  height: 50vh;
+  background-size: cover;
+}
+
+.back-xs {
+  background: url("../../../assets/placeholder2-mobile.jpg") no-repeat 0 0;
+  width: 100%;
+  height: 50vh;
+}

@@ -1,0 +1,9 @@
+.footer * {
+  background-color: white;
+  font-size: 90%;
+  color: grey;
+}
+
+.footer-links a:hover {
+  color: black;
+}

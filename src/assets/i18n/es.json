@@ -1,0 +1,45 @@
+{
+    "header":{
+        "home":"Inicio",
+        "gallery":"Galería",
+        "contact":"Contacto"
+    },
+    "web": {
+        "topic1": {
+            "title":"Experiencia",
+            "text":"Placeholder text : Esta secci\u00F3n presenta informaci\u00F3n general sobre los\r\n            tipos de tratamiento usados contra el c\u00E1ncer, incluyendo los tratamientos\r\n            convencionales, como cirug\u00EDa, quimioterapia y radioterapia, as\u00ED como\r\n            aquellos que son m\u00E1s recientes."
+        },
+        "topic2": {
+            "title":"Diagnóstico",
+            "text":"Placeholder text : Cuando un m\u00E9dico realiza un procedimiento por 100 ocasiones alcanza una experiencia que permite cuantificar sus errores y corregirlos en el futuro. Las \u00E1reas en las cuales la experiencia pesa son todas aquellas de tipo quir\u00FArgico-invasivo."
+        },
+        "topic3": {
+            "title":"Tratamientos",
+            "text":"Placeholder text : El momento hist\u00F3rico exacto en que se hace referencia a Espa\u00F1a por primera vez no est\u00E1 claramente definido, existiendo escritos del siglo VI en los que ya aparece la palabra Espa\u00F1a, como el \u00ABLaus Spaniae\u00BB de la Historia de los reyes godos"
+        },
+        "carrousel": {
+            "title":"Equipo",
+            "text":"Placeholder text : Un equipo es un grupo de seres humanos que se re\u00FAnen y trabajan en conjunto para alcanzar una meta en com\u00FAn. Para esto, el equipo mantiene una cierta organizaci\u00F3n que le permita conseguir sus objetivos."
+        },
+        "contact": {
+            "title":"Contacto",
+            "ownerTitle":"Director Ejecutivo:",
+            "owner":"Placeholder surname1 surname2",
+            "phone":"Tel.: 959 99 99 999",
+            "emailTitle":"Email:",
+            "email":"placeholder@gmail.com",
+            "addressTitle":"Dirección:",
+            "line1":"Placeholder street line 1",
+            "line2":"Placeholder street line 2"
+        }
+    },
+    "gallery":{
+        "title":"Galería"
+    },
+    "footer":{
+        "follow":"Síguenos en:",
+        "home":"Inicio",
+        "gallery":"Galería",
+        "contact":"Contacto"
+    }
+}

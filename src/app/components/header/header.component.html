@@ -1,0 +1,82 @@
+<mat-toolbar class="top-toolbar">
+  <mat-toolbar-row fxLayoutAlign="space-between center">
+    <div fxLayout="row" fxLayoutGap="45%" fxLayoutAlign="center center">
+      <button class="logo" mat-button [routerLink]="'/'" [disableRipple]="true">
+        <img  src="assets/ccl_logo.png" />
+        <span>{{ 'header.home' | translate }}</span>
+      </button>
+
+      <div fxHide.xs>
+        <a
+          mat-button
+          [disableRipple]="true"
+          class="animated-border"
+          [routerLink]="'/gallery'"
+        >
+        {{ 'header.gallery' | translate }}
+        </a>
+        <a *ngIf="currentUrlPath == '/'"
+          mat-button
+          [disableRipple]="true"
+          class="animated-border"
+          (click)="scrollToContact('AnchorContact')"
+        >
+        {{ 'header.contact' | translate }}
+        </a>
+        <a *ngIf="currentUrlPath == '/gallery'"
+          mat-button
+          [disableRipple]="true"
+          class="animated-border"
+          [routerLink]="'/'"
+        >
+        {{ 'header.contact' | translate }}
+        </a>
+      </div>
+    </div>
+    <div>
+      <button
+        *ngIf="currentLang == 'es'"
+        mat-button
+        [disableRipple]="true"
+        (click)="useLanguage('en')"
+      >
+        <img src="assets/icons_flags/en.jpg" style="max-height: 20px" />
+      </button>
+      <button
+        *ngIf="currentLang == 'en'"
+        mat-button
+        [disableRipple]="true"
+        (click)="useLanguage('es')"
+      >
+        <img src="assets/icons_flags/es.jpg" style="max-height: 20px" />
+      </button>
+    </div>
+  </mat-toolbar-row>
+  <mat-toolbar-row fxHide fxShow.xs fxLayoutAlign=" center">
+    <a
+      mat-button
+      [disableRipple]="true"
+      class="animated-border"
+      [routerLink]="'/gallery'"
+    >
+    {{ 'header.gallery' | translate }}
+    </a>
+    <a
+    *ngIf="currentUrlPath == '/'"
+      mat-button
+      [disableRipple]="true"
+      class="animated-border"
+      (click)="scrollToContact('AnchorContact')"
+    >
+    {{ 'header.contact' | translate }}
+    </a>
+    <a *ngIf="currentUrlPath == '/gallery'"
+          mat-button
+          [disableRipple]="true"
+          class="animated-border"
+          [routerLink]="'/'"
+        >
+        {{ 'header.contact' | translate }}
+    </a>
+  </mat-toolbar-row>
+</mat-toolbar>

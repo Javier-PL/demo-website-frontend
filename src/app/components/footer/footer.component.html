@@ -1,0 +1,72 @@
+<mat-toolbar class="footer">
+  <mat-toolbar-row fxLayoutAlign="center center" fxLayoutGap="15%">
+    <div fxHide.xs fxFlex="30%"></div>
+
+    <div
+      fxFlex="30%"
+      fxLayoutAlign="center center"
+      fxLayout="row"
+      fxLayoutGap="5%"
+      style="padding: 1%"
+    >
+      <div>{{ 'footer.follow' | translate }}</div>
+      <div>
+        <a href="https://www.facebook.com/"
+          ><img src="../../../assets/facebook-48.png" style="height: 25px"
+        /></a>
+      </div>
+      <div>
+        <a href="https://www.instagram.com/"
+          ><img src="../../../assets/instagram-48.png" style="height: 25px"
+        /></a>
+      </div>
+    </div>
+
+    <div fxHide.xs class="footer-links" fxFlex="30%">
+      <a
+        *ngIf="currentUrlPath == '/'"
+        mat-button
+        [disableRipple]="true"
+        (click)="scrollToTop('AnchorTop')"
+      >
+      {{ 'footer.home' | translate }}
+      </a>
+      <a
+        *ngIf="currentUrlPath == '/gallery'"
+        mat-button
+        [disableRipple]="true"
+        [routerLink]="'/'"
+      >
+      {{ 'footer.home' | translate }}
+      </a>
+      <span> / </span>
+      <a mat-button [disableRipple]="true" [routerLink]="'/gallery'">
+        {{ 'footer.gallery' | translate }}
+      </a>
+    </div>
+  </mat-toolbar-row>
+  <mat-toolbar-row fxHide fxShow.xs fxLayoutAlign="center center">
+    <div class="footer-links">
+      <a
+        *ngIf="currentUrlPath == '/'"
+        mat-button
+        [disableRipple]="true"
+        (click)="scrollToTop('AnchorTop')"
+      >
+      {{ 'footer.home' | translate }}
+      </a>
+      <a
+        *ngIf="currentUrlPath == '/gallery'"
+        mat-button
+        [disableRipple]="true"
+        [routerLink]="'/'"
+      >
+      {{ 'footer.home' | translate }}
+      </a>
+      <span> / </span>
+      <a mat-button [disableRipple]="true" [routerLink]="'/gallery'">
+        {{ 'footer.gallery' | translate }}
+      </a>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

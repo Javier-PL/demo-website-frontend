@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/primeng/resources/themes/luna-amber/theme.css';
+@import '../node_modules/primeng/resources/primeng.min.css';
+@import '~primeicons/primeicons.css';
+
+
+html { height: 100vh; font-size: 100%;}
+body { height: 100vh;margin: 0; font: 0.725em/1em Roboto, "Helvetica Neue", sans-serif; }
+
+
+:root{
+    /*font-size: 10px ;*/
+}
+
